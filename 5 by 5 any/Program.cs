@@ -23,7 +23,6 @@ namespace _5_by_5_any
                 if (i < 1000000) //run the game until I've won 1 million times.
                 {
 
-                    //!Console.WriteLine("{0},{1}", x, y); //where u at
 
 
 
@@ -41,18 +40,18 @@ namespace _5_by_5_any
                     {
                         x = 0;
                         y = 3;
-                        //!Console.WriteLine("up ladder to 0,3");
+                        //Console.WriteLine("up ladder to 0,3");
                     }
                     else if (x == 2 && y == 2)
                     {
                         x = 3;
                         y = 4;
-                        //!Console.WriteLine("up lad to 3,4");
+                        //Console.WriteLine("up lad to 3,4");
                     }
                     //snake
                     else if (x == 1 && y == 3)
                     {
-                        //!Console.WriteLine("snake to 2,0");
+                        //Console.WriteLine("snake to 2,0");
                         x = 3;
                         y = 0;
                     }
@@ -85,11 +84,10 @@ namespace _5_by_5_any
                     else
                     {
                         int Roll = diceRoll.Next(1, 4); //roll 1,2 or 3.
-                        //!Console.WriteLine("rolled {0}", Roll);
-                        r++;
-                        //!Console.WriteLine("{0}", r); //times rolled
 
-                        if (y % 2 == 0) //if line is even
+                        r++; //increase number of rolls
+
+                        if (y % 2 == 0)
                         {
                             if (x + Roll < 5)
                             {
@@ -123,9 +121,8 @@ namespace _5_by_5_any
                         }
 
 
-                        else if (y % 2 != 0)
+                        else if (y % 2 != 0)//odd rows
                         {
-                            //Console.WriteLine("y is odd");
                             if (x - Roll >= 0)
                             {
                                 x -= Roll;
